@@ -31,16 +31,16 @@
             <div class=" md:hidden  ">
 
                 <div class="dropdown dropdown-end mx-auto">
-                    <button class="btn btn-active btn-warning rounded-lg"><i
-                            class="fa-solid fa-cart-shopping"></i> Cart </button>
+                    <button class="btn btn-active btn-warning rounded-lg"><i class="fa-solid fa-cart-shopping"></i> Cart
+                    </button>
                     <ul id="mobile-cart-dropdown" tabindex="0"
-                        class="dropdown-content menu bg-white text-black rounded-box z-1 w-85 p-2 shadow-sm cart-item   rounded-lg max-w-[330px] md:w-[260px] md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-normal">
+                        class="dropdown-content menu bg-orange-300 text-black rounded-box z-1 w-85 p-2 shadow-sm cart-item   rounded-lg max-w-[340px]  md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-normal">
                         <h1 class="text-[20px] font-bold mb-3">Your Cart</h1>
                         <div id="cart-list"></div>
 
                         <!-- Cart items -->
 
-                        <div class="cart-total border-t-2 border-gray-200 mt-5 p-2 flex justify-between items-center ">
+                        <div class="cart-total border-t-2 border-green-200 mt-5 p-2 flex justify-between items-center ">
                             <p class="font-semibold">Total :</p>
                             <p id="cart-total" class="font-semibold">0</p>
                         </div>
@@ -101,76 +101,8 @@
                 </div>
 
                 <div class="cards-container ">
-                    <div id="card-spinner" class=" fl                    # Green Earth Project – JavaScript ES6 Concepts
-                    
-                    ## 1. What is the difference between `var`, `let`, and `const`?
-                    
-                    - **`var`**:  
-                      - Function-scoped or globally scoped.
-                      - Can be re-declared and updated.
-                      - Hoisted (initialized as `undefined` before code runs).
-                    - **`let`**:  
-                      - Block-scoped.
-                      - Can be updated but not re-declared in the same scope.
-                      - Not hoisted in the same way as `var` (temporal dead zone).
-                    - **`const`**:  
-                      - Block-scoped.
-                      - Cannot be updated or re-declared.
-                      - Must be initialized at declaration.
-                      - For objects/arrays, the reference cannot change, but properties/elements can be modified.
-                    
-                    ## 2. What is the difference between `map()`, `forEach()`, and `filter()`?
-                    
-                    - **`map()`**:  
-                      - Returns a new array with the results of calling a function on every element.
-                      - Does not modify the original array.
-                    - **`forEach()`**:  
-                      - Executes a function on each array element.
-                      - Does not return anything (returns `undefined`).
-                      - Used for side effects (e.g., logging, updating external variables).
-                    - **`filter()`**:  
-                      - Returns a new array with elements that pass a test implemented by a provided function.
-                      - Does not modify the original array.
-                    
-                    ## 3. What are arrow functions in ES6?
-                    
-                    - Arrow functions are a concise way to write functions using the `=>` syntax.
-                    - They do **not** have their own `this`, `arguments`, or `super`.
-                    - Useful for short, anonymous functions.
-                    
-                    **Example:**
-                    ```js
-                    const add = (a, b) => a + b;
-                    ```
-                    
-                    ## 4. How does destructuring assignment work in ES6?
-                    
-                    - Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.
-                    
-                    **Array destructuring:**
-                    ```js
-                    const [a, b] = [1, 2]; // a = 1, b = 2
-                    ```
-                    
-                    **Object destructuring:**
-                    ```js
-                    const {name, age} = {name: 'Alice', age: 25}; // name = 'Alice', age = 25
-                    ```
-                    
-                    ## 5. Explain template literals in ES6. How are they different from string concatenation?
-                    
-                    - Template literals use backticks (`` ` ``) instead of quotes.
-                    - Allow embedded expressions using `${}`.
-                    - Support multi-line strings.
-                    
-                    **Example:**
-                    ```js
-                    const name = 'Alice';
-                    const greeting = `Hello, ${name}!`;
-                    ```
-                    
-                    **Difference from string concatenation:**
-                    - Easier to read and write, especially with variables and multi-lineex flex-col md:flex-row gap-5 my-5 flex-1 mx-auto hidden">
+                    <div id="card-spinner"
+                        class=" flex flex-col md:flex-row gap-5 my-5 flex-1 mx-auto hidden">
                         <div class="flex max-w-[375px] md:w-[275px] flex-col gap-4">
                             <div class="skeleton h-32 w-full"></div>
                             <div class="skeleton h-5 w-28"></div>
@@ -216,20 +148,21 @@
             <h3 class="text-center mb-5 text-2xl font-bold">About the Campaign</h3>
 
             <div class=" mx-auto flex flex-col md:flex-row flex-1 gap-10 justify-center items-center" id="about">
-                 <div>
+                <div>
                     <img src=" ./assets/about.png" alt="">
-            </div>
-            <div class=" max-w-[500px] text-gray-500">
-                <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since our
-                    start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
-                    forests, create habitats for wildlife, and combat global warming.
-                </p>
-                <ul class="list-disc pl-5 mt-3 ">
-                    <li>Restoration of natural habitats</li>
-                    <li>Improvement of air quality</li>
-                    <li>Support for local communities</li>
-                </ul>
-            </div>
+                </div>
+                <div class=" max-w-[500px] text-gray-500">
+                    <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since
+                        our
+                        start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
+                        forests, create habitats for wildlife, and combat global warming.
+                    </p>
+                    <ul class="list-disc pl-5 mt-3 ">
+                        <li>Restoration of natural habitats</li>
+                        <li>Improvement of air quality</li>
+                        <li>Support for local communities</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
