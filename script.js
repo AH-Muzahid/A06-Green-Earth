@@ -179,6 +179,7 @@ function removeFromCart(index) {
     updateCart();
 }
 
+// mobile cart remove on desktop
 const showCart = document.getElementById('mobile-cart-dropdown')
 if (window.innerWidth > 576 && showCart) {
     showCart.remove();
