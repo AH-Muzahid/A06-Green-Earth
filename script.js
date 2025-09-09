@@ -178,3 +178,8 @@ function removeFromCart(index) {
 
     updateCart();
 }
+
+const showCart = document.getElementById('mobile-cart-dropdown')
+if (window.innerWidth > 576 && showCart) {
+    showCart.remove();
+}

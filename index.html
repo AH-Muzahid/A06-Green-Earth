@@ -27,25 +27,44 @@
             <button class=" btn btn-active text-[#15803D] bg-[#FACC15] hover:bg-[#eeff59] border-none rounded-4xl">Plant
                 a Tree</button>
         </div>
-        <div class=" block md:hidden  bg-white text-[#15803D] p-2 rounded-xl ">
-            <p> <i class="fa-solid fa-cart-shopping"></i> Cart</p>
-        </div>
+        <div class="flex items-center">
+            <div class=" md:hidden  ">
 
-        <div class="md:hidden">
-            <div class="navbar-start">
                 <div class="dropdown dropdown-end">
-                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h7" />
-                        </svg>
-                    </div>
-                    <ul class="menu menu-sm dropdown-content  bg-[#6a7510] rounded-md z-1 mt-2 w-[100px] p-2 ">
-                        <li><a>About</a></li>
-                        <li><a>Gallery</a></li>
-                        <li><button class=" text-[#15803D] bg-[#FACC15] hover:bg-[#eeff59] border-none rounded-lg">Plant
-                                a Tree</button></li>
+                    <button class="btn btn-active btn-warning rounded-lg"><i
+                            class="fa-solid fa-cart-shopping"></i> Cart </button>
+                    <ul id="mobile-cart-dropdown" tabindex="0"
+                        class="dropdown-content menu bg-white text-black rounded-box z-1 w-85 p-2 shadow-sm cart-item   rounded-lg max-w-[330px] md:w-[260px] md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-">
+                        <h1 class="text-[20px] font-bold mb-3">Your Cart</h1>
+                        <div id="cart-list"></div>
+
+                        <!-- Cart items -->
+
+                        <div class="cart-total border-t-2 border-gray-200 mt-5 pt-2 flex justify-between items-center ">
+                            <p class="font-semibold">Total :</p>
+                            <p id="cart-total" class="font-semibold">0</p>
+                        </div>
                     </ul>
+                </div>
+            </div>
+
+            <div class="md:hidden">
+                <div class="navbar-start">
+                    <div class="dropdown dropdown-end">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul class="menu menu-sm dropdown-content  bg-[#6a7510] rounded-md z-1 mt-2 w-[100px] p-2 ">
+                            <li><a>About</a></li>
+                            <li><a>Gallery</a></li>
+                            <li><button
+                                    class=" text-[#15803D] bg-[#FACC15] hover:bg-[#eeff59] border-none rounded-lg">Plant
+                                    a Tree</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -82,9 +101,27 @@
                 </div>
 
                 <div class="cards-container ">
-                    <span id="card-spinner"
-                        class="loading loading-dots text-2xl px-[20px] hidden"></span>
+                    <div id="card-spinner" class=" flex flex-col md:flex-row gap-5 my-5 flex-1 mx-auto hidden">
+                        <div class="flex max-w-[375px] md:w-[275px] flex-col gap-4">
+                            <div class="skeleton h-32 w-full"></div>
+                            <div class="skeleton h-5 w-28"></div>
+                            <div class="skeleton h-5 w-full"></div>
+                            <div class="skeleton h-5 w-full mb-5"></div>
+                        </div>
+                        <div class="flex max-w-[375px] md:w-[275px] flex-col gap-4">
+                            <div class="skeleton h-32 w-full"></div>
+                            <div class="skeleton h-5 w-28"></div>
+                            <div class="skeleton h-5 w-full"></div>
+                            <div class="skeleton h-5 w-full"></div>
+                        </div>
+                        <div class="flex max-w-[375px] md:w-[275px] flex-col gap-4">
+                            <div class="skeleton h-32 w-full"></div>
+                            <div class="skeleton h-5 w-28"></div>
+                            <div class="skeleton h-5 w-full"></div>
+                            <div class="skeleton h-5 w-full"></div>
+                        </div>
 
+                    </div>
                     <div class="cards grid grid-cols-1 md:grid-cols-3 gap-5 my-5 flex-1 mx-auto" id="card-container">
 
 
@@ -92,11 +129,11 @@
                 </div>
 
                 <div
-                    class="cart-item bg-[#FFFFFF] p-5 rounded-lg shadow-sm max-w-[330px] md:w-[260px] md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-">
+                    class=" hidden md:block  cart-item bg-[#FFFFFF] p-5 rounded-lg shadow-sm max-w-[330px] md:w-[260px] md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-">
                     <h1 class="text-[20px] font-bold mb-3">Your Cart</h1>
                     <div id="cart-list"></div>
 
-                    <!-- Cart items will be dynamically inserted here -->
+                    <!-- Cart items  -->
 
                     <div class="cart-total border-t-2 border-gray-200 mt-5 pt-2 flex justify-between items-center ">
                         <p class="font-semibold">Total :</p>
