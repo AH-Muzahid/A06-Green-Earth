@@ -12,45 +12,12 @@
 
 <body class="max-w-[1440px] mx-auto ">
     <nav
-        class="flex items-center justify-between py-[15px] px-[20px] md:px-[90px] md:py-[24px] bg-[#15803D] text-white sticky top-0 z-10">
-        <div class="logo">
-            <h4 class="text-xl">🌱 Green Earth</h4>
-        </div>
-        <div>
-            <ul class="nav-links hidden md:visible md:flex gap-2 md:space-x-6">
-                <li><a href="#about">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Plant a Tree</a></li>
-            </ul>
-        </div>
-        <div class="hidden md:block">
-            <button class=" btn btn-active text-[#15803D] bg-[#FACC15] hover:bg-[#eeff59] border-none rounded-4xl">Plant
-                a Tree</button>
-        </div>
-        <div class="flex flex-row-reverse items-center">
-            <div class=" md:hidden  ">
+        class="flex items-center justify-between py-[12px] pr-[18px] md:px-[90px] md:py-[20px] bg-[#15803D] text-white sticky top-0 z-10 opacity-95">
 
-                <div class="dropdown dropdown-end mx-auto">
-                    <button class="btn btn-active btn-warning rounded-lg"><i class="fa-solid fa-cart-shopping"></i> Cart
-                    </button>
-                    <ul id="mobile-cart-dropdown" tabindex="0"
-                        class="dropdown-content menu bg-orange-300 text-black rounded-box z-1 w-85 p-2 shadow-sm cart-item   rounded-lg w-[360px]  md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-normal">
-                        <h1 class="text-[20px] font-bold mb-3">Your Cart</h1>
-                        <div id="cart-list"></div>
-
-                        <!-- Cart items -->
-
-                        <div class="cart-total border-t-2 border-green-200 mt-5 p-2 flex justify-between items-center ">
-                            <p class="font-semibold">Total :</p>
-                            <p id="cart-total" class="font-semibold">0</p>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-
+        <div class="flex items-center">
             <div class="md:hidden">
                 <div class="navbar-start">
-                    <div class="dropdown dropdown-end">
+                    <div class="dropdown ">
                         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -67,7 +34,41 @@
                     </div>
                 </div>
             </div>
+
+            <div class="logo">
+                <h4 class="text-xl font-bold">🌱 Green Earth</h4>
+            </div>
         </div>
+        <div>
+            <ul class="nav-links hidden md:flex gap-2 md:space-x-6">
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Plant a Tree</a></li>
+            </ul>
+        </div>
+        <div class="hidden md:block">
+            <button class=" btn btn-active text-[#15803D] bg-[#FACC15] hover:bg-[#eeff59] border-none rounded-4xl">Plant
+                a Tree</button>
+        </div>
+        <div class=" md:hidden ">
+            <div class="dropdown dropdown-end mx-auto">
+                <button class="btn btn-active btn-warning rounded-lg"><i class="fa-solid fa-cart-shopping"></i> Cart
+                </button>
+                <ul id="mobile-cart-dropdown" tabindex="0"
+                    class="dropdown-content menu bg-orange-300 text-black rounded-box z-1 w-85 p-2 shadow-sm cart-item   rounded-lg w-[360px]  md:min-h-[100px] h-fit mx-auto my-5 overflow-y-auto md:justify-normal">
+                    <h1 class="text-[20px] font-bold mb-3">Your Cart</h1>
+                    <div id="cart-list"></div>
+
+                    <!-- Cart items -->
+
+                    <div class="cart-total border-t-2 border-green-200 mt-5 p-2 flex justify-between items-center ">
+                        <p class="font-semibold">Total :</p>
+                        <p id="cart-total" class="font-semibold">0</p>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
     </nav>
 
     <main class="bg-[#F0FDF4] mx-auto">
@@ -101,7 +102,7 @@
                 </div>
 
                 <div class="cards-container ">
-                    <div id="card-spinner" class=" flex flex-col md:flex-row gap-5 my-5 flex-1 mx-auto hidden">
+                    <div id="card-spinner" class=" flex flex-col md:flex-row gap-5 my-5 flex-1 mx-auto">
                         <div class="flex max-w-[375px] md:w-[275px] flex-col gap-4">
                             <div class="skeleton h-32 w-full"></div>
                             <div class="skeleton h-5 w-28"></div>
